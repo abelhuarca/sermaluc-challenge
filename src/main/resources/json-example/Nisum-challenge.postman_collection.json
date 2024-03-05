@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "ba3a0fa0-f150-4060-8465-5b813ec88c23",
+		"name": "Nisum-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "982872"
+	},
+	"item": [
+		{
+			"name": "ListClientDemo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmVsaG8yMjMzQGRvbWFpbi5jbCIsImF1dGgiOlt7ImF1dGhvcml0eSI6IkNMSUVOVCJ9XSwiaWF0IjoxNjYwNTE4OTE4LCJleHAiOjE2NjA1MTkyMTh9.ow9jdfVo888LPhalho_5NzVybheEdylU6hK8mmRKdqY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8096/nisum/challenge/v1/users/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"nisum",
+						"challenge",
+						"v1",
+						"users",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Abel Huarca Eguizabal\",\r\n\"email\":\"abelho2233@domain.cl\",\r\n\"password\":\"12346789AHsasa\",\r\n\"phones\" : [\r\n        {\r\n        \"number\": \"987654321\" ,\r\n        \"cityCode\" : \"1\" ,\r\n        \"countryCode\" : \"57\"\r\n        },\r\n        {\r\n        \"number\" : \"987654321\" ,\r\n        \"cityCode\" : \"1\" ,\r\n        \"countryCode\" : \"57\"\r\n        }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8096/nisum/challenge/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"nisum",
+						"challenge",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
